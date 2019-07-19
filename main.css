@@ -1,0 +1,181 @@
+*{
+    box-sizing: border-box
+}
+
+body{
+    font-family: 'exo', sans-serif;
+    text-align: center;
+    font-size: 20px;
+    padding: 30px;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center; /* aligns links vertically */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    width: 100%;
+    height: 60px;
+    background-color: black;
+    box-shadow: 0 0 25px 0 black;
+}
+
+li {
+    display: block;
+    padding: 1rem;
+    transition-duration: 0.5s;
+    position: relative;
+    text-decoration: none;
+    color: #fff;
+    
+}
+
+nav .dropdown li a{
+    align-self: flex-start;
+}
+
+li:hover
+li:focus-within {
+    background: rgb(167, 161, 161);
+    cursor: pointer;
+}
+
+ul li:hover > ul,
+ul li:focus-within > ul,
+ul li ul:hover {
+  visibility: visible;
+  opacity: 1;
+  display: block;
+}
+
+ul li ul {
+    background: black;
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    transition: all 0.5s ease;
+    margin-top: 1rem;
+    left: 0;
+    display: none;
+}
+
+ul li ul li {
+    clear: both;
+    width: 100%;
+}
+
+a{
+    color: aliceblue;
+    text-decoration: none;
+    margin: 10px;
+    padding: 25px;
+    display: block;
+}
+
+.navbar .logo{
+    color: aliceblue;
+    text-decoration: none;
+}
+
+.navbar .links{
+  justify-content: flex-end;
+  align-items: flex-end;
+  list-style: none
+
+}
+
+header .image{
+    border-radius: 8px;
+    max-width: 100%;
+    height: auto;
+    border-style: double;
+    border-width: thick;
+    padding: 30px;
+}
+
+header{
+    padding: 30px;
+    width: 100%;
+    height: 100%;
+    font-family: 'Vollkorn', serif;
+}
+
+
+.wrapper{
+    flex-flow: wrap;
+    align-items: stretch;
+}
+
+.apps-1{
+    background-color: #F05E5E;
+}
+
+.apps-2{
+    background-color: #F4B640;
+}
+
+.apps-3{
+    background-color: #3464CE;
+}
+
+footer {
+    background: black;
+    color: aliceblue;
+    text-align: center;
+}
+
+footer a{
+    list-style: none;
+    text-decoration: none;
+    color: aliceblue;
+}
+
+p{
+    font-size: 16px;
+}
+
+
+
+
+/*tablet and desktop mode*/
+
+@media only screen and (min-width: 600px) {
+    .wrapper {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+    }
+
+    .apps-1{
+        flex: 0 0 33%;
+    }
+
+    .apps-2{
+        flex: 1;
+    }
+
+    .apps-3{
+        flex: 1;
+    }
+
+
+    .navbar *{
+        display: inline;
+    }
+
+    
+    p{
+        font-size: 25px;
+    }
+
+    header{
+        padding: 60px;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+
