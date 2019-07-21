@@ -1,9 +1,11 @@
-$(".jumper").on("click", function( e ) {
-    
-  e.preventDefault();
-
-  $("body, html").animate({ 
-      scrollTop: $( $(this).attr('href') ).offset().top 
-  }, 600);
-  
+$(document).ready(function(){
+  $(".dropdown").hover(
+    function(){
+      $(this).children('.dropdown-content').slideDown(200);
+    },
+    function(){
+      $(this).children('.dropdown-content').slideUp(200);
+    }
+  );  
 });
+ 
